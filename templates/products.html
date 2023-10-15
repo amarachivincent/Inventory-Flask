@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+
+     <div class="row" >
+         <div class="col-md-12">
+      {% if rows %}
+       <table class="table table-display">
+           <thead>
+            <tr>
+                <th>Inventory</th>
+                <th>Quantity</th>
+                <th>Date</th>
+            </tr>
+           </thead>
+           <tbody>
+
+     {% for row in rows %}
+         <tr>
+             <td>{{row[1]}}</td>
+             <td>{{row[2]}}</td>
+             <td>{{row[3]}}</td>
+         </tr>
+
+     {% endfor %}
+           </tbody>
+       </table>
+      {% else: %}
+      <p>No product in the inventory yet</p>
+      {% endif %}
+         </div>
+         </div>
+
+      <div class="row">
+          <div class="col-md-12">
+         <p><a class="btn btn-primary btn-sm" role="button" href="/newjokeform">New Product</a></p>
+      </div>
+     </div>
+{% endblock %}
+

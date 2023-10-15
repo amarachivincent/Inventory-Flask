@@ -1,0 +1,22 @@
+
+
+{% extends "base.html" %}
+{% block content %}
+
+     <div class="row">
+
+         <div class="col-md-12">
+             <h2>Edit Jokes</h2>
+             {% for row in rows %}
+             <form action='/updatejokedata' method='post'>
+              <input type='hidden' value={{row[0]}} id="joke_id" name='joke_id' />
+                 <input type='text' id="joke_name" name='joke_name' value ={{row[1]}} />
+              <input type='submit' id='action' name='action' value='Update' class="btn btn-primary"/>
+              </form>
+             {% endfor %}
+         </div>
+
+      </div>
+{% endblock %}
+
+

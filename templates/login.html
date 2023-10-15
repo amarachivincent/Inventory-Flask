@@ -1,0 +1,18 @@
+<html>
+<head>
+ <title>Login</title>
+ <link href="{{url_for('static',filename='css/index.css')}}" rel='Stylesheet' />
+</head>
+
+<body>
+<div>
+
+ <form action='/login' method='post'>
+  <input type='text' id='username' name='username' placeholder='username' />
+  <input type='password' id='pass' name='pass' />
+  <input type='submit' id='action' name='action' value='Submit' />
+  </form>
+
+</div>
+</body>
+</html>
