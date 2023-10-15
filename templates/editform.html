@@ -5,16 +5,18 @@
 
      <div class="row">
 
-         <div class="col-md-12">
-             <h2>Edit Jokes</h2>
+         <div class="col-md-5">
+             <h4>Edit products</h4>
              {% for row in rows %}
-             <form action='/updatejokedata' method='post'>
-              <input type='hidden' value={{row[0]}} id="joke_id" name='joke_id' />
-                 <input type='text' id="joke_name" name='joke_name' value ={{row[1]}} />
+             <form action='/updateproductdata' method='post' role="form">
+              <input type='hidden' value={{row[0]}} id="product_id" name='product_id' />
+                 <input type='text' id="product_name" name='product_name' value ={{row[1]}} class="form-control" />
+                  <input type='text' id="product_quantity" name='product_quantity' value ={{row[2]}} class="form-control" />
               <input type='submit' id='action' name='action' value='Update' class="btn btn-primary"/>
               </form>
              {% endfor %}
          </div>
+         <div class="col-md-7"></div>
 
       </div>
 {% endblock %}

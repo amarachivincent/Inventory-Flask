@@ -11,7 +11,8 @@
        <table class="table table-display">
            <thead>
             <tr>
-                <th>Jokes</th>
+                <th>Products</th>
+                <th>Quantities</th>
                 <th>Date</th>
                 <th>Action</th>
             </tr>
@@ -22,11 +23,12 @@
          <tr>
              <td>{{row[1]}}</td>
              <td>{{row[2]}}</td>
+             <td>{{row[3]}}</td>
              <td>
                  <form action="/adminform" method="post">
                      <input type="hidden" value={{row[0]}} id="id" name="id" />
                      <input type="submit" value="Edit"  name="action" class="btn btn-primary btn-sm"/>
-                          <input type="submit" value="Delete"  name="action" class=" btn btn-danger btn-sm"/>
+                     <input type="submit" value="Delete"  name="action" class=" btn btn-danger btn-sm"/>
                   </form>
 
              </td>
@@ -36,11 +38,17 @@
            </tbody>
        </table>
       {% else: %}
-      <p>Nothing to display yet</p>
+      <p>No product to display yet</p>
       {% endif %}
          </div>
 
+
       </div>
+      <div class="row">
+          <div class="col-md-12">
+         <p><a class="btn btn-primary btn-sm" role="button" href="/newproductform">New Product</a></p>
+      </div>
+     </div>
 {% endblock %}
 
 
