@@ -27,9 +27,6 @@ def index():
 def new():
     return render_template('newproductform.html')
 
-@app.route('/dataform')
-def dataform():
-    return render_template('dataform.html')
 
 @app.route('/newproductdata', methods=['POST', 'GET'])
 def newproduct():
